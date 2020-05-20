@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/b4dcbcf938.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Manrope&display=swap" rel="stylesheet">
+    <title>Filter</title>
+</head>
+<body>
+
+    <section>
+        <h1 id="titulo">filtro</h1>
+        <header>
+            <input type="text" id='filtro'>
+            <i class="search fas fa-search"></i>
+        </header>
+        <div id="body"></div>
+        <div id="add"><i class="fas fa-user-plus"></i></div>
+    </section>
+
+    <div id="fundo" >
+        <div class="modal"></div>
+    </div>
+
+    <form id='form'>
+        <div class="tela">
+            <div>
+                <label for="">Nome: </label>
+                <input type="text" id='nomeI'>
+            </div>
+            <div>
+                <select name="" id="sexo">
+                    <option value="M">M</option>
+                    <option value="F">F</option>
+                </select>
+            </div>
+            <div id='inputMenor'>
+                <label for="">Idade: </label>
+                <input type="number" id='idade'>
+            </div>
+            <div id='chamaForm'>
+                <i  id='salva' class="fas fa-check-circle"></i>
+                <!-- <i class="far fa-check-circle"></i> -->
+            </div>
+        </div>
+    </form>
+    
+
+
+<script src="js/main.js" type="module"></script>
+
+
+</body>
+</html>

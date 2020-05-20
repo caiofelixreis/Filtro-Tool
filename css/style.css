@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+section{
+    width: 100vw;
+    height: 100vh;
+    background-image:linear-gradient( rgb(82, 255, 168),rgb(0, 255, 127));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+header{
+    min-width:200px;
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+    flex-wrap: wrap;
+}
+
+header > input{
+    border-radius: 20px;
+    border: 2px solid rgb(0, 255, 127);
+    padding: 15px;
+    min-width: 200px;
+    box-shadow: 0px 0px 0px 3px white;
+    margin: 10px;
+    color:rgb(8, 197, 103);
+    font-family: 'Manrope';
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 600px){
+    header {
+        display: grid;
+        grid-template-columns: 80% 1fr;
+    }
+    header > input{
+        min-width: 80%;
+    }
+}
+
+.search{
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    cursor: pointer;
+
+}
+
+
+#body{
+
+    margin-top: 30px;
+    min-height: 300px;
+    max-height: 300px;
+    min-width: 24%;
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 255, 127);
+    box-shadow: 0px 0px 0px 3px white;
+    font-family: 'Manrope';
+    color:rgb(8, 197, 103);
+    font-size: 1.4rem;
+
+    display: grid;
+    grid-template-columns: 90% 1fr;
+    overflow: scroll;
+    align-items: center;
+}
+p{
+    padding: 5px;
+}
+h1{
+    font-family: 'Manrope';
+    margin-left:-15px;
+    color: white;
+    text-shadow: 1px 1px  rgb(8, 197, 103);
+    font-size:4rem;
+    background-color: transparent;
+}
+h1::after{
+    content: '|';
+    font-size: 3.8rem;
+    margin-left: 5px;
+    opacity:1;
+    animation: piscar .9s infinite;
+    color: white;
+    text-shadow: 1px 1px rgb(8, 197, 103);
+}
+
+#info{
+    background-color: transparent;
+    border: none;
+    font-size: 1.3rem;
+    color: rgb(10, 233, 121);
+    cursor: pointer;
+}
+
+
+@keyframes piscar{
+    0%,100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+}
+
+input,button{
+    outline: none;
+}
+
+::-webkit-scrollbar{
+    border: none;
+    width: 06px;
+    
+}
+
+::-webkit-scrollbar-thumb{
+    background-image: linear-gradient(rgb(0, 255, 127), rgb(82, 255, 168));
+    border-radius: 20px;
+}
+::-webkit-scrollbar-button{
+    background-color: transparent;
+}
+::-webkit-scrollbar-corner{
+    background-color: transparent;
+}
+
+#fundo{
+    position: absolute;
+    top: 0;
+    background-color: #0002;
+    width:100vw ;
+    height: 100vh;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+    
+}
+.modal{
+    background-color:white ;
+    padding: 40px 85px;
+    /*border: 2px solid rgb(82, 255, 168);*/
+    box-shadow: 9px 9px 1px 0px rgb(82, 255, 168);
+    border-radius: 20px;
+    position: relative;
+    font-family: 'Manrope';
+    color:rgb(18, 194, 106) ;
+    text-align: center;
+    
+}
+.modal > p{
+    font-size: 1.5rem;
+}
+.modal > h3{
+    font-size: 2rem;
+    font-weight: normal;
+}
+#fechar{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-family: 'Manrope';
+    color:rgb(18, 194, 106) ;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#add{
+    margin-top: 15px;
+    font-size: 1.7rem;
+    color: white;
+    text-shadow: 4px 4px  rgb(18, 194, 106) ;
+    cursor: pointer;
+    padding: 5px;
+}
+
+form{
+    position: absolute;
+    top: 0;
+    background-color: #0002;
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.tela{
+    display: grid;
+    grid-template-columns: 80% 1fr;
+    padding: 50px 40px;
+    background-color: white;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Manrope';
+    color: rgb(18, 194, 106);
+    border-radius: 50px;
+
+    box-shadow: 4px 4px 9px 2px rgb(18, 194, 106);
+}
+
+.tela > div:nth-child(1){
+    margin: 20px;
+    font-size: 1.6rem;
+}
+.tela > div:nth-child(2){
+    margin-top:56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row:1/4;
+    
+}
+.tela > div:nth-child(3){
+    margin: 20px;
+    font-size: 1.6rem;
+}
+.tela > div:nth-child(4){
+    grid-column: 1/3;
+    text-align: center;
+    font-size: 3rem;
+
+}
+.tela > div >input{
+
+    text-shadow: 10px;
+    border: none;
+    border-bottom: 2px  dotted rgb(18, 194, 106);
+    font-size: 1.2rem;
+    font-family: 'Manrope';
+    color: grey;
+}
+#inputMenor input{
+    width: 150px;
+}
+.tela > div > select{
+    width: 80px;
+    height: 60px;
+    background-color: rgb(18, 194, 106);
+    border: 2px solid white;
+    box-shadow: 0px 0px 0px 1px rgb(18, 194, 106);
+    border-radius: 20px;
+    font-family: 'Manrope';
+    color: white;
+    padding: 10px;
+    font-size: 1.4rem;
+    outline: none;
+
+}
+
+
+
+.in{
+    animation: in 1s forwards;
+}
+.out{
+    animation: out 1s forwards;
+}
+
+
+@keyframes in{
+    0%{
+        opacity: 0;
+        transform: translate3d(0px, -80px, 0px);
+    }
+    100%{
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+@keyframes out{
+    0%{
+        opacity: 1;
+        transform: translate3d(0px, 0px, 0px);
+    }
+    100%{
+        opacity: 0;
+        transform: translate3d(0px, -80px, 0px);
+    }
+}
